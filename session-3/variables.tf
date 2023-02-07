@@ -15,3 +15,9 @@ variable "env" {
     description = "Indicates the enviroment"
     default = "dev"
 }
+variable "tags" {
+    type = map
+    default = {
+        Name = "development"
+    }
+}
