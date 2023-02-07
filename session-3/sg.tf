@@ -10,7 +10,7 @@ ingress {
     protocol         = "tcp"
     cidr_blocks      = ["68.129.177.23/32"]
 }
- egress {
+egress {
     description      = "Opening all ports for outbound traffic outbound" 
     from_port   = 0
     to_port     = 0
