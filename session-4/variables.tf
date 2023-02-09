@@ -8,7 +8,7 @@ variable "instance_type" {
 variable "env" {
     type = string
     description = "Indicates the enviroment"
-    default = "dev"
+    default = "prod"
 }
 variable "tags" {
     type = map
