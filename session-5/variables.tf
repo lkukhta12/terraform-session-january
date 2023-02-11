@@ -10,3 +10,8 @@ variable "env" {
     description = "Indicates the enviroment"
     default = "dev"
 }
+variable "ports" {
+    type = list(string)
+    description = "List ports"
+    default = [ "22" ]
+}
