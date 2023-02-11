@@ -8,7 +8,7 @@ resource "aws_security_group_rule" "ingress" {
   to_port           = element(var.ports, 0) # port 22
   protocol          = "tcp"
   from_port         = element(var.ports, 0) # port 22
-  security_group_id = aws_security_group.main_sg.id
+  security_group_id = aws_security_group.main.id
   cidr_blocks      = ["68.129.177.23/32"]
 }
 
@@ -17,7 +17,7 @@ resource "aws_security_group_rule" "egress" {
   to_port           = 0
   protocol          = "-1"
   from_port         = 0
-  security_group_id = aws_security_group.main_sg.id
+  security_group_id = aws_security_group.main.id
   cidr_blocks      = ["0.0.0.0/0"]
 }  
  
