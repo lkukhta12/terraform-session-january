@@ -1,7 +1,7 @@
 provider "aws" {
   region = "us-east-1"
 }
-resource "aws_security_group" "main" {
+resource "aws_security_group" "Session-3EC2" {
     name        = "terraformsg"
     description = "Allow ports for inbound and outbound traffic of the server"
     vpc_id      = "vpc-0e6848796d1f4ca2d"

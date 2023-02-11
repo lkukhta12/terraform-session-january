@@ -12,7 +12,7 @@ terraform {
 #AWS Provider = v4.53.0
 
 #Semantic versioning 
-# As in our example abpve version 1.3.7
+# As in our example above version 1.3.7
 #1 = Major
 #3 = Minor
 # = Patch
