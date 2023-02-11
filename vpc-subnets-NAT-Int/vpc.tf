@@ -2,11 +2,8 @@
 
 resource "aws_vpc" "load-balancer-vpc" {
   cidr_block = "10.0.0.0/16"
-  tags {
-    Name = aws_vpc.load-balancer-vpc
-  }
+  tags = aws_vpc.load-balancer-vpc
 }
-
 
 #Task:
 #1. Create a VPC with CIDR Block of 10.0.0.0/16
