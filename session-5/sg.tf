@@ -4,6 +4,7 @@ resource "aws_security_group" "main" {
     vpc_id      = "vpc-0e6848796d1f4ca2d" # my default aws vpc id or other vpc
 }
 resource "aws_security_group_rule" "ingress" {
+  count = 2
   type              = "ingress"
   to_port           = element(var.ports, 0) # port 22
   protocol          = "tcp"
