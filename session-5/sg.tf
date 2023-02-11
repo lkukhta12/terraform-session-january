@@ -4,7 +4,7 @@ resource "aws_security_group" "main" {
     vpc_id      = "vpc-0e6848796d1f4ca2d" # my default aws vpc id or other vpc
 }
 resource "aws_security_group_rule" "ingress" {
-  count = 2 # to open 2 ports from variables file
+  count = 3 # to open 3 ports specified from variables file
   type              = "ingress"
   to_port           = element( var.ports, count.index ) # port 22
   from_port         = element( var.ports, count.index ) # port 22
@@ -12,6 +12,7 @@ resource "aws_security_group_rule" "ingress" {
   protocol          = "tcp"
   cidr_blocks      = ["68.129.177.23/32"]
 }
+
 resource "aws_security_group_rule" "egress" {
   type              = "egress"
   to_port           = 0
@@ -19,7 +20,9 @@ resource "aws_security_group_rule" "egress" {
   from_port         = 0
   security_group_id = aws_security_group.main.id
   cidr_blocks      = ["0.0.0.0/0"]
-}  
+} 
+
+# count = length (var.ports)
 # element(var.port, 0)
 #count = 2
 #count.index = 0, 1
