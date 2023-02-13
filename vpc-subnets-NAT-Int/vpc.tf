@@ -7,7 +7,7 @@ resource "aws_vpc" "load-balancer-vpc" {
     Name = "aws_vpc.load-balancer-vpc"
 }
 }
-#Task:
+#Homework Task:
 #1. Create a VPC with CIDR Block of 10.0.0.0/16
 #2. Create 3 public subnets and 3 private subnets
 #3. Create Internet and Nat Gateway

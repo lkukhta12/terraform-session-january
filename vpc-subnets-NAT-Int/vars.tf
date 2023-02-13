@@ -7,8 +7,3 @@ variable "aws_vpc" {
     default = "load-balancer-vpc"  
 }
 
-#variable "number_of_public_subnets" {
-#  default = 3
-#}
-#variable "number_of_private_subnets" {
-#  default = 3
