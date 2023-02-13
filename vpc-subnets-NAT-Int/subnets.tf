@@ -2,7 +2,7 @@
 
 resource "aws_subnet" "public-subnet-1a" {
   vpc_id = aws_vpc.load-balancer-vpc.id
-  map_public_ip_on_launch = "true" # true makes subnet public
+  map_public_ip_on_launch = true # true makes subnet public
   cidr_block = "10.0.1.0/24"
   availability_zone = "us-east-1a"
   tags = {
@@ -11,7 +11,7 @@ resource "aws_subnet" "public-subnet-1a" {
 }
 resource "aws_subnet" "public-subnet-1b" {
   vpc_id = aws_vpc.load-balancer-vpc.id
-  map_public_ip_on_launch = "true" # true makes subnet public
+  map_public_ip_on_launch = true # true makes subnet public
   cidr_block = "10.0.2.0/24"
   availability_zone = "us-east-1b"
   tags = {
@@ -20,7 +20,7 @@ resource "aws_subnet" "public-subnet-1b" {
 }
 resource "aws_subnet" "public-subnet-1c" {
   vpc_id = aws_vpc.load-balancer-vpc.id
-  map_public_ip_on_launch = "true" # true makes subnet public
+  map_public_ip_on_launch = true # true makes subnet public
   cidr_block = "10.0.3.0/24"
   availability_zone = "us-east-1c"
   tags = {
