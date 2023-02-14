@@ -8,11 +8,11 @@ sed -i "s/_evn_$ENV/g" backend.tf
 echo "Enviroment is set to $ENV"
 
 terraform init
-terraform plan -var-file=$ENV.ftvars
+terraform plan -var-file=$ENV.tfvars
 
 read -p "Are you sure that you would like to apply?" apply
 if $apply == [yes]:
-then terraform apply -var-file=$ENV.ftvars -auto-approve
+then terraform apply -var-file=$ENV.tfvars -auto-approve
 else echo "Terraform is not going to apply"
 fi
 
