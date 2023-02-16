@@ -15,11 +15,11 @@ resource "aws_db_instance" "main" {
 #else set to true
 #prod == prod ? skip_final_snapshot  = false : skip_final_snapshot  = true
 
-#resource "random_password" "db_password" {
- #   length = 20
- #   special = true
- #   override_special = "%@"
-#}
+resource "random_password" "db_password" {
+    length = 20
+    special = true
+    override_special = "%@"
+}
 
 #Equality Operators
 # Equal a==a: means a equals a
