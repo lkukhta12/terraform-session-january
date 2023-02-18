@@ -12,7 +12,7 @@ variable "vpc_cidr" {
 }
 variable "aws_autoscaling_group" {
     type = string
-    default = "autoscale"
+    default = "autoscale_ag"
 }
 variable "aws_security_group" {
     type = string
@@ -53,5 +53,5 @@ variable "instance_type" {
 }
 variable "aws_instance" {
     type = string
-    default = "autoscaling_ec2" 
+    default = "autoscale" 
 }
