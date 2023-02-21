@@ -8,7 +8,7 @@ resource "aws_security_group" "main" {
         from_port        = 22
         to_port          = 22
         protocol         = "tcp"
-        cidr_blocks      = ["68.129.177.23/32"]
+        cidr_blocks      = ["52.203.138.0/32"]
     }
         ingress {
         description      = "opening port for SSH connection inbound" 
