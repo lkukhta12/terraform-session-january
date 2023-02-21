@@ -22,7 +22,12 @@ resource "aws_instance" "first_ec2" {
             "sudo systemctl start httpd",
             "sudo cp /tmp/index.html /var/www/html/index.html"
         ]
-      
+        connection {
+            type = "ssh"
+            user = "ec2-user"  # Remote Server User
+            host = self.public_ip
+            private_key = file("~/.ssh/id_rsa")
+        }
     }
 }
 resource "aws_key_pair" "terraform_server" {
@@ -30,6 +35,5 @@ resource "aws_key_pair" "terraform_server" {
     public_key = file("~/.ssh/id_rsa.pub")  
 }
 output "install_ip" {
-    value = aws_instance.main.public_ip
-  
+    value = aws_instance.first_ec2.public_ip
 }
