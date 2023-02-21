@@ -21,7 +21,8 @@ resource "aws_autoscaling_group" "autoscale_ag" {
     #health_check_grace_period = 300 # in seconds
     #health_check_type = "ELB" #enabled
     launch_template = {
-        id = aws_launch_template.autoscale.id
+        id = "${aws_launch_template.autoscale.name}"
+
     }
 }
 resource "random_password" "db_password" {
