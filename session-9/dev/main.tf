@@ -13,9 +13,12 @@ module "ec2_instance" {
     env = "dev"
     ami = "ami-0aa7d40eeae50c9a9"
     instance_type = "t2.micro"
-    sg = [module.ec_sg.id]             # module .module_name.attribute
+    sg = [module.ec_sg.id]             # module.module_name.attribute
 }
 module "ec2_sg" {
-    source = "../../modules/modules/sg"
+    source = "../../modules/sg/sg"   #copied location/home/ec2-user/terraform-session-january/modules/sg/sg.tf
     env = "dev"
 }
+
+# How to reference to child module?
+# Always refernce to Child Module outputs
