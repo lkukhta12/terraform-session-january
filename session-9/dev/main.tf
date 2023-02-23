@@ -13,8 +13,9 @@ module "ec2_instance" {
     env = "dev"
     ami = "ami-0aa7d40eeae50c9a9"
     instance_type = "t2.micro"
+    sg = [module.ec_sg.id]             # module .module_name.attribute
 }
 module "ec2_sg" {
-    source = "../../modules/sg"
+    source = "../../modules/modules/sg"
     env = "dev"
 }
