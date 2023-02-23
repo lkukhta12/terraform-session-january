@@ -13,3 +13,8 @@ variable "instance_type" {
     description = "This is an instance size for EC2 instance"
     default = "t2.micro"
 }
+variable "sg" {
+    type = list(string)
+    description = "List of security group ids"
+    default = ""
+}
