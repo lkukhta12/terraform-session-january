@@ -1,7 +1,7 @@
 resource "aws_security_group" "main" {
     name        = "${var.env}-sg"
     description = "Allow ports for inbound and outbound traffic of the server"
-}
+    
     ingress {
         description      = "opening port for SSH connection inbound" 
         from_port        = 22
@@ -16,3 +16,4 @@ resource "aws_security_group" "main" {
         protocol         = "-1"
         cidr_blocks      = ["0.0.0.0/0"]
     }
+}

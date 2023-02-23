@@ -16,5 +16,5 @@ variable "instance_type" {
 variable "sg" {
     type = list(string)
     description = "List of security group ids"
-    default = ""
+    default = [""]
 }
