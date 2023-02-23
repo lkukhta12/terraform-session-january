@@ -7,7 +7,7 @@
 
 
 module "ec2_instance" {
-    source = "../../modules/ec2" # This where you indicate teh location of the child module
+    source = "../../modules/modules/ec2" # This where you indicate teh location of the child module
     ###### variables - you need/MUST to define your variables in the following section ##### 
     ##### These 3 variables are most important ones ##########
     env = "dev"
